@@ -1,9 +1,9 @@
-export default function Place() {
+export default function Place({placeItem}) {
   return (
-    <li key="the place id" className="place-item">
+    <li key={placeItem.id} className="place-item">
       <button>
-        <img src="the place image src" alt="the place image alt" />
-        <h3>"the place title"</h3>
+        <img src={placeItem.image.src} alt={placeItem.image.alt} />
+        <h3>{placeItem.title}</h3>
       </button>
     </li>
   );
